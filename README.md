@@ -1,5 +1,8 @@
 ## Developer report: iPad keyboard stops after flashcard audio
 
+## Problem Summary
+
+On iPadOS, hardware-keyboard shortcuts frequently stop responding after flashcard audio plays. Audio playback appears to move or drop focus away from the webpage’s expected keyboard target, while the current shortcut implementation only accepts key events directed at `document.body`. As a result, review controls such as `Space`, `R`, and `1/2/3` no longer work until the user taps or clicks the page to restore focus. 
 
 ### Root cause
 
